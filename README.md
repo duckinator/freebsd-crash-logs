@@ -20,6 +20,5 @@ Here's all the information I have:
 - When it happens, Xorg is pegged at 100% CPU usage, and I can not _kill_ processes (even with `kill -9 <PID>` or `pkill -9 <NAME>`), but e.g. running `exit` from inside bash will cause it to exit.
 - If I catch it early enough, I can ssh in from my phone and `shutdown -r now`. But I've only managed this once.
 - I know for a fact nobody is locally tampering with my system (and there's no animals/pets to do so).
-- ~~It runs out of swap, despite it usually having 40GB+ RAM free when I walk away.~~ (This is not the case; it was an incorrect assumption based on it killing processes because of swap.)
-- After running out of swap, it kills 75-85 processes, which is notable for being *nearly every freaking process on the system*.
+- If it is left alone long enough, the logs eventually say it runs out of swap, then 75-85 processes are terminated, which is notable for being *nearly every freaking process on the system*.
 - The logs show most of them being killed *the same second*, but I suspect there is some logging delay introduced by whatever is happening.
